@@ -1,6 +1,7 @@
 /*
  * Erfahrungen Page – Testimonials / Reviews
  * Design: Editorial Healthcare – warm, trustworthy
+ * CTAs: Personalisiert – mid-page CTA zwischen Testimonials
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -82,6 +83,9 @@ const allTestimonials = [
   },
 ];
 
+const firstHalf = allTestimonials.slice(0, 6);
+const secondHalf = allTestimonials.slice(6);
+
 export default function Erfahrungen() {
   return (
     <Layout>
@@ -103,11 +107,11 @@ export default function Erfahrungen() {
         </div>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="py-12 md:py-20 bg-white">
+      {/* First Half of Testimonials */}
+      <section className="py-12 md:py-16 bg-white">
         <div className="container max-w-5xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {allTestimonials.map((t, i) => (
+            {firstHalf.map((t, i) => (
               <FadeIn key={i} delay={i * 0.04}>
                 <div className="p-6 rounded-lg bg-[#FAFAF8] border border-[#eee] hover:shadow-md transition-all h-full flex flex-col">
                   <div className="flex items-center gap-0.5 mb-3">
@@ -128,7 +132,53 @@ export default function Erfahrungen() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Mid-Page CTA */}
+      <section className="py-10 md:py-14 bg-[#FDF2F8]/50">
+        <div className="container text-center max-w-2xl">
+          <FadeIn>
+            <h2 className="text-xl md:text-2xl font-bold text-[#2D2D2D] mb-3">
+              Diese Frauen haben den ersten Schritt gemacht.
+            </h2>
+            <p className="text-sm text-[#666] mb-6">
+              Du verdienst es auch, dich wieder sicher und unbeschwert zu fühlen. Finde heraus, ob der Beckenbodenstuhl das Richtige für dich ist.
+            </p>
+            <Link
+              href="/anfrage/dein-anliegen"
+              className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+            >
+              Deine persönliche Beratung anfragen
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </FadeIn>
+        </div>
+      </section>
+
+      {/* Second Half of Testimonials */}
+      <section className="py-12 md:py-16 bg-white">
+        <div className="container max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {secondHalf.map((t, i) => (
+              <FadeIn key={i} delay={i * 0.04}>
+                <div className="p-6 rounded-lg bg-[#FAFAF8] border border-[#eee] hover:shadow-md transition-all h-full flex flex-col">
+                  <div className="flex items-center gap-0.5 mb-3">
+                    {Array.from({ length: t.rating }).map((_, j) => (
+                      <Star key={j} className="w-3.5 h-3.5 fill-[#E91E8C] text-[#E91E8C]" />
+                    ))}
+                  </div>
+                  <Quote className="w-6 h-6 text-[#E91E8C]/15 mb-2" />
+                  <p className="text-sm text-[#555] leading-relaxed flex-1">{t.text}</p>
+                  <div className="mt-4 pt-3 border-t border-[#eee]">
+                    <p className="text-sm font-semibold text-[#2D2D2D]">{t.name}</p>
+                    <p className="text-xs text-[#999]">{t.detail}</p>
+                  </div>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
       <section className="py-16 md:py-20 bg-[#E91E8C]">
         <div className="container text-center">
           <FadeIn>
@@ -142,7 +192,7 @@ export default function Erfahrungen() {
               href="/anfrage/dein-anliegen"
               className="inline-flex items-center gap-2 bg-white text-[#E91E8C] font-semibold px-8 py-3.5 rounded-md hover:bg-[#FDF2F8] transition-all shadow-lg text-sm"
             >
-              Jetzt Termin anfragen
+              Jetzt meine Erfolgsgeschichte starten
               <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeIn>

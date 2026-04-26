@@ -1,6 +1,7 @@
 /*
  * Über Uns Page – About Regina and the practice
  * Design: Editorial Healthcare – warm, trustworthy
+ * CTAs: Personalisiert in jedem zweiten Abschnitt
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -43,9 +44,17 @@ export default function UeberUns() {
                 <p className="text-[#555] leading-relaxed mb-4">
                   Ich bin Regina Forstner – Physiotherapeutin, Osteopathin und Tanztherapeutin mit über 20 Jahren Erfahrung. Mein Anliegen ist es, dir die Freude und den Spaß an der Bewegung zu vermitteln.
                 </p>
-                <p className="text-[#555] leading-relaxed">
+                <p className="text-[#555] leading-relaxed mb-6">
                   In meiner Praxis in St. Georgen bei Salzburg verbinde ich klassische Physiotherapie mit ganzheitlichen Ansätzen. Ich habe mich auf chronische und akute Beschwerden im Bereich des Bewegungsapparates, der Neurologie und der Psychosomatik spezialisiert.
                 </p>
+                {/* CTA im Hero */}
+                <Link
+                  href="/anfrage/dein-anliegen"
+                  className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+                >
+                  Regina persönlich kennenlernen
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </FadeIn>
 
@@ -95,6 +104,22 @@ export default function UeberUns() {
               </FadeIn>
             ))}
           </div>
+
+          {/* CTA nach Philosophie */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Jetzt persönliche Betreuung anfragen
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Ganzheitlich, persönlich und auf dich zugeschnitten.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -150,6 +175,22 @@ export default function UeberUns() {
               </FadeIn>
             ))}
           </div>
+
+          {/* CTA nach Galerie */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Praxis besuchen – Termin vereinbaren
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Überzeuge dich selbst von der angenehmen Atmosphäre.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -166,7 +207,7 @@ export default function UeberUns() {
             <p className="text-[#555] leading-relaxed mb-6">
               Ich verrechne direkt mit den Krankenkassen ÖGK, SVS und BVAEB. Der PelviPower Beckenbodenstuhl ist eine Privatleistung – gerne beraten wir dich zu den Kosten im persönlichen Gespräch.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               {["ÖGK", "SVS", "BVAEB"].map((kasse) => (
                 <span
                   key={kasse}
@@ -176,6 +217,14 @@ export default function UeberUns() {
                 </span>
               ))}
             </div>
+            {/* CTA nach Kassenverrechnung */}
+            <Link
+              href="/anfrage/dein-anliegen"
+              className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+            >
+              Fragen zur Kostenübernahme? Jetzt beraten lassen
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </FadeIn>
         </div>
       </section>
@@ -194,7 +243,7 @@ export default function UeberUns() {
               href="/anfrage/dein-anliegen"
               className="inline-flex items-center gap-2 bg-white text-[#E91E8C] font-semibold px-8 py-3.5 rounded-md hover:bg-[#FDF2F8] transition-all shadow-lg text-sm"
             >
-              Termin anfragen
+              Dein persönliches Erstgespräch anfragen
               <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeIn>

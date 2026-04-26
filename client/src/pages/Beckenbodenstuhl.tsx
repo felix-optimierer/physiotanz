@@ -1,6 +1,7 @@
 /*
  * Beckenbodenstuhl Page – Detailed info about PelviPower
  * Design: Editorial Healthcare – warm, trustworthy
+ * CTAs: Personalisiert in jedem zweiten Abschnitt
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -76,7 +77,7 @@ export default function Beckenbodenstuhl() {
                   href="/anfrage/dein-anliegen"
                   className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
                 >
-                  Termin vereinbaren
+                  Jetzt unverbindlich beraten lassen
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -141,6 +142,22 @@ export default function Beckenbodenstuhl() {
               </div>
             </FadeIn>
           </div>
+
+          {/* CTA nach Technologie */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Klingt gut? Lass dich persönlich beraten
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Wir erklären dir alles in Ruhe – kostenlos und unverbindlich.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -168,6 +185,22 @@ export default function Beckenbodenstuhl() {
               </FadeIn>
             ))}
           </div>
+
+          {/* CTA nach Anwendungsgebiete */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Ist der Stuhl das Richtige für mich? Jetzt herausfinden
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Im Beratungsgespräch klären wir gemeinsam, ob der Beckenbodenstuhl für dich geeignet ist.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -193,6 +226,16 @@ export default function Beckenbodenstuhl() {
                   <p>
                     Wir empfehlen eine Serie von 8-12 Sitzungen, idealerweise 2x pro Woche. Die Intensität wird individuell an dich angepasst und kann von Sitzung zu Sitzung gesteigert werden.
                   </p>
+                </div>
+                {/* CTA nach Behandlungsablauf */}
+                <div className="mt-6">
+                  <Link
+                    href="/anfrage/dein-anliegen"
+                    className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+                  >
+                    Mein persönliches Erstgespräch buchen
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
                 </div>
               </div>
             </FadeIn>
@@ -245,10 +288,26 @@ export default function Beckenbodenstuhl() {
               </FadeIn>
             ))}
           </div>
+
+          {/* CTA nach FAQ */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <p className="text-sm text-[#666] mb-4">
+                Noch Fragen? Wir beantworten sie dir gerne persönlich.
+              </p>
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Deine offenen Fragen im Gespräch klären
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Final CTA */}
       <section className="py-16 md:py-20 bg-[#E91E8C]">
         <div className="container text-center">
           <FadeIn>
@@ -262,7 +321,7 @@ export default function Beckenbodenstuhl() {
               href="/anfrage/dein-anliegen"
               className="inline-flex items-center gap-2 bg-white text-[#E91E8C] font-semibold px-8 py-3.5 rounded-md hover:bg-[#FDF2F8] transition-all shadow-lg text-sm"
             >
-              Kostenloses Beratungsgespräch
+              Kostenloses Beratungsgespräch vereinbaren
               <ArrowRight className="w-4 h-4" />
             </Link>
           </FadeIn>

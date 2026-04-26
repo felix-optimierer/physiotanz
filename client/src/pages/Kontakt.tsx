@@ -2,6 +2,7 @@
  * Kontakt Page – Physiotanz
  * Design: Editorial Healthcare – warm, trustworthy
  * Includes Google Maps integration for practice location
+ * CTAs: Personalisiert in mehreren Abschnitten
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -21,7 +22,6 @@ export default function Kontakt() {
 
   const handleMapReady = (map: google.maps.Map) => {
     mapRef.current = map;
-    // Add a marker for the practice
     new google.maps.marker.AdvancedMarkerElement({
       map,
       position: PRAXIS_LOCATION,
@@ -42,9 +42,17 @@ export default function Kontakt() {
               Wir freuen uns<br />
               <span className="text-[#E91E8C]">auf dich.</span>
             </h1>
-            <p className="text-[#555] leading-relaxed">
+            <p className="text-[#555] leading-relaxed mb-6">
               Hast du Fragen zum Beckenbodenstuhl oder möchtest einen Termin vereinbaren? Kontaktiere uns – wir sind gerne für dich da.
             </p>
+            {/* CTA im Hero */}
+            <Link
+              href="/anfrage/dein-anliegen"
+              className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+            >
+              Direkt Termin anfragen
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </FadeIn>
         </div>
       </section>
@@ -167,22 +175,38 @@ export default function Kontakt() {
               Bürmooser Landesstraße 4, 5113 St. Georgen bei Salzburg
             </p>
           </FadeIn>
+
+          {/* CTA nach Google Maps */}
+          <FadeIn delay={0.2}>
+            <div className="text-center mt-8">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Jetzt Besuch in der Praxis planen
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Kostenlose Parkplätze direkt vor der Praxis.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-12 md:py-16 bg-[#FDF2F8]/50">
+      {/* Final CTA */}
+      <section className="py-12 md:py-16 bg-[#E91E8C]">
         <div className="container text-center max-w-2xl">
           <FadeIn>
-            <h2 className="text-xl md:text-2xl font-bold text-[#2D2D2D] mb-3">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
               Lieber direkt online anfragen?
             </h2>
-            <p className="text-sm text-[#666] mb-6">
+            <p className="text-sm text-white/80 mb-6">
               Nutze unser Anfrage-Formular und wir melden uns schnellstmöglich bei dir zurück.
             </p>
             <Link
               href="/anfrage/dein-anliegen"
-              className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              className="inline-flex items-center gap-2 bg-white text-[#E91E8C] font-semibold px-6 py-3 rounded-md hover:bg-[#FDF2F8] transition-all shadow-lg text-sm"
             >
               Zum Anfrage-Formular
               <ArrowRight className="w-4 h-4" />

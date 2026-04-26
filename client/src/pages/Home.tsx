@@ -3,6 +3,7 @@
  * Design: "Vertrauen & Wärme" – Editorial Healthcare
  * Target: Avatar 1 – Junge Mama nach Geburt mit Beckenbodenproblemen
  * Focus: PelviPower Beckenbodenstuhl als Lösung
+ * CTAs: Personalisiert in jedem zweiten Abschnitt
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -206,6 +207,22 @@ export default function Home() {
               „Ich dachte, das gehört jetzt einfach dazu als Mama. Aber das stimmt nicht."
             </p>
           </FadeIn>
+
+          {/* CTA nach Problem-Sektion */}
+          <FadeIn delay={0.35}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Jetzt persönliche Unterstützung anfragen
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Unverbindlich & kostenlos – wir finden gemeinsam die richtige Lösung für dich.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -299,6 +316,22 @@ export default function Home() {
               </FadeIn>
             ))}
           </div>
+
+          {/* CTA nach Vorteile-Sektion */}
+          <FadeIn delay={0.3}>
+            <div className="text-center mt-10">
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Dein Beckenboden-Training starten
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <p className="text-xs text-[#999] mt-3">
+                Kostenloses Erstgespräch – wir beraten dich ganz individuell.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -394,13 +427,21 @@ export default function Home() {
             ))}
           </div>
 
+          {/* CTA nach Testimonials */}
           <FadeIn delay={0.3}>
-            <div className="text-center mt-8">
+            <div className="text-center mt-10">
               <Link
                 href="/erfahrungen"
-                className="inline-flex items-center gap-2 text-[#E91E8C] font-semibold text-sm hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-[#E91E8C] font-semibold text-sm hover:gap-3 transition-all mr-6"
               >
                 Alle Erfahrungsberichte lesen
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/anfrage/dein-anliegen"
+                className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Auch du kannst das schaffen
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -434,7 +475,7 @@ export default function Home() {
                 <p className="text-[#555] leading-relaxed mb-6">
                   Ich verstehe die Herausforderungen junger Mütter – denn Beckenbodenprobleme nach der Geburt sind häufiger als du denkst. Mit dem PelviPower Beckenbodenstuhl biete ich dir eine moderne, effektive und diskrete Lösung.
                 </p>
-                <div className="flex flex-wrap gap-3">
+                <div className="flex flex-wrap gap-3 mb-6">
                   <span className="text-xs px-3 py-1.5 bg-[#FDF2F8] text-[#E91E8C] rounded-full font-medium">
                     Physiotherapeutin
                   </span>
@@ -448,6 +489,14 @@ export default function Home() {
                     20+ Jahre Erfahrung
                   </span>
                 </div>
+                {/* CTA nach Über Regina */}
+                <Link
+                  href="/anfrage/dein-anliegen"
+                  className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+                >
+                  Persönliches Gespräch mit Regina vereinbaren
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
               </div>
             </FadeIn>
           </div>
