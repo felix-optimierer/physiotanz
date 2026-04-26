@@ -5,31 +5,37 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
-
+import Beckenbodenstuhl from "./pages/Beckenbodenstuhl";
+import UeberUns from "./pages/UeberUns";
+import Erfahrungen from "./pages/Erfahrungen";
+import Kontakt from "./pages/Kontakt";
+import AnfrageStep1 from "./pages/AnfrageStep1";
+import AnfrageStep2 from "./pages/AnfrageStep2";
+import AnfrageStep3 from "./pages/AnfrageStep3";
+import Danke from "./pages/Danke";
 
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      <Route path="/" component={Home} />
+      <Route path="/beckenbodenstuhl" component={Beckenbodenstuhl} />
+      <Route path="/ueber-uns" component={UeberUns} />
+      <Route path="/erfahrungen" component={Erfahrungen} />
+      <Route path="/kontakt" component={Kontakt} />
+      <Route path="/anfrage/dein-anliegen" component={AnfrageStep1} />
+      <Route path="/anfrage/deine-daten" component={AnfrageStep2} />
+      <Route path="/anfrage/termin" component={AnfrageStep3} />
+      <Route path="/danke" component={Danke} />
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />

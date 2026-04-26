@@ -1,49 +1,52 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { AlertCircle, Home } from "lucide-react";
-import { useLocation } from "wouter";
+/*
+ * 404 Not Found Page – Physiotanz themed
+ * Design: Editorial Healthcare – warm, trustworthy
+ */
+import Layout from "@/components/Layout";
+import FadeIn from "@/components/FadeIn";
+import { Link } from "wouter";
+import { ArrowRight, Heart } from "lucide-react";
 
 export default function NotFound() {
-  const [, setLocation] = useLocation();
-
-  const handleGoHome = () => {
-    setLocation("/");
-  };
-
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Card className="w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm">
-        <CardContent className="pt-8 pb-8 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="relative">
-              <div className="absolute inset-0 bg-red-100 rounded-full animate-pulse" />
-              <AlertCircle className="relative h-16 w-16 text-red-500" />
+    <Layout>
+      <section className="py-20 md:py-32 bg-[#FAFAF8] min-h-[70vh] flex items-center">
+        <div className="container max-w-xl text-center">
+          <FadeIn>
+            <div className="w-16 h-16 rounded-full bg-[#FDF2F8] flex items-center justify-center mx-auto mb-6">
+              <Heart className="w-8 h-8 text-[#E91E8C]" />
             </div>
-          </div>
 
-          <h1 className="text-4xl font-bold text-slate-900 mb-2">404</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-[#E91E8C]/20 mb-2 font-[family-name:var(--font-heading)]">
+              404
+            </h1>
 
-          <h2 className="text-xl font-semibold text-slate-700 mb-4">
-            Page Not Found
-          </h2>
+            <h2 className="text-xl md:text-2xl font-bold text-[#2D2D2D] mb-4">
+              Diese Seite hat sich verlaufen
+            </h2>
 
-          <p className="text-slate-600 mb-8 leading-relaxed">
-            Sorry, the page you are looking for doesn't exist.
-            <br />
-            It may have been moved or deleted.
-          </p>
+            <p className="text-[#555] leading-relaxed mb-8">
+              Keine Sorge – genau wie beim Beckenboden finden wir auch hier den richtigen Weg zurück. Die Seite, die du suchst, existiert leider nicht.
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <Button
-              onClick={handleGoHome}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
-            >
-              <Home className="w-4 h-4 mr-2" />
-              Go Home
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+              >
+                Zur Startseite
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/beckenbodenstuhl"
+                className="inline-flex items-center justify-center gap-2 border border-[#E91E8C]/30 text-[#E91E8C] font-medium px-6 py-3 rounded-md hover:bg-[#FDF2F8] transition-all text-sm"
+              >
+                Beckenbodenstuhl entdecken
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </section>
+    </Layout>
   );
 }
