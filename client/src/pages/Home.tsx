@@ -122,10 +122,10 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Link
                     href="/anfrage/dein-anliegen"
-                    className="inline-flex items-center justify-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md hover:shadow-lg text-sm"
+                    className="inline-flex items-center justify-center gap-2.5 bg-[#16a34a] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#15803d] transition-all shadow-lg hover:shadow-xl text-base md:text-lg"
                   >
                     Kostenlos beraten lassen
-                    <ArrowRight className="w-4 h-4" />
+                    <ArrowRight className="w-5 h-5" />
                   </Link>
                   <Link
                     href="/beckenbodenstuhl"
