@@ -5,6 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 import Home from "./pages/Home";
 import Beckenbodenstuhl from "./pages/Beckenbodenstuhl";
 import UeberUns from "./pages/UeberUns";
@@ -14,6 +15,8 @@ import AnfrageStep1 from "./pages/AnfrageStep1";
 import AnfrageStep2 from "./pages/AnfrageStep2";
 import AnfrageStep3 from "./pages/AnfrageStep3";
 import Danke from "./pages/Danke";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 
 function Router() {
   return (
@@ -29,6 +32,8 @@ function Router() {
         <Route path="/anfrage/deine-daten" component={AnfrageStep2} />
         <Route path="/anfrage/termin" component={AnfrageStep3} />
         <Route path="/danke" component={Danke} />
+        <Route path="/impressum" component={Impressum} />
+        <Route path="/datenschutz" component={Datenschutz} />
         <Route path="/404" component={NotFound} />
         <Route component={NotFound} />
       </Switch>
@@ -43,6 +48,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Router />
+          <CookieBanner />
         </TooltipProvider>
       </ThemeProvider>
     </ErrorBoundary>

@@ -245,22 +245,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/35">
             <p>&copy; {new Date().getFullYear()} Physiotanz – Regina Forstner. Alle Rechte vorbehalten.</p>
             <div className="flex items-center gap-4">
-              <a
-                href="https://bewegungsoptimierer.de/datenschutz"
-                target="_blank"
+              <Link
+                href="/datenschutz"
                 rel="noopener noreferrer"
                 className="hover:text-white/60 transition-colors"
               >
                 Datenschutz
-              </a>
-              <a
-                href="https://bewegungsoptimierer.de/impressum"
-                target="_blank"
+              </Link>
+              <Link
+                href="/impressum"
                 rel="noopener noreferrer"
                 className="hover:text-white/60 transition-colors"
               >
                 Impressum
-              </a>
+              </Link>
             </div>
           </div>
         </div>
