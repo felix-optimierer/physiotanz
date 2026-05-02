@@ -185,36 +185,16 @@ export default function Datenschutz() {
                 </p>
               </div>
 
-              {/* 9. Google Fonts */}
+              {/* 9. Schriftarten (lokal gehostet) */}
               <div>
                 <h2 className="text-lg font-semibold text-[#2D2D2D] mb-2">
-                  9. Google Fonts
+                  9. Schriftarten (lokal gehostet)
                 </h2>
                 <p className="leading-relaxed">
-                  Diese Website nutzt zur einheitlichen Darstellung von Schriftarten sogenannte Google Fonts, bereitgestellt von der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Aufruf einer Seite lädt Ihr Browser die benötigten Schriftarten direkt von Google-Servern. Dabei wird Ihre IP-Adresse an Google übermittelt.
+                  Diese Website nutzt zur einheitlichen Darstellung von Schriftarten die Schriftfamilien „Lora" und „Source Sans 3". Diese Schriftarten werden <strong>lokal auf unserem eigenen Server</strong> gehostet und von dort geladen. Es wird <strong>keine Verbindung zu Google-Servern</strong> oder anderen externen Servern hergestellt. Ihre IP-Adresse wird nicht an Dritte übermittelt.
                 </p>
                 <p className="leading-relaxed mt-2">
-                  <strong>Hinweis:</strong> Wir planen, die Google Fonts lokal auf unserem eigenen Server zu hosten, um die Datenübertragung an Google vollständig zu vermeiden. Bis zur Umsetzung erfolgt die Nutzung auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung).
-                </p>
-                <p className="leading-relaxed mt-2">
-                  Mehr Informationen zu Google Fonts finden Sie unter{" "}
-                  <a
-                    href="https://developers.google.com/fonts/faq"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#E91E8C] hover:underline"
-                  >
-                    https://developers.google.com/fonts/faq
-                  </a>{" "}
-                  und in der Datenschutzerklärung von Google:{" "}
-                  <a
-                    href="https://policies.google.com/privacy"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#E91E8C] hover:underline"
-                  >
-                    https://policies.google.com/privacy
-                  </a>
+                  Da die Schriftarten ausschließlich von unserem eigenen Server geladen werden, findet keine Datenübertragung an Dritte statt. Die Bereitstellung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen und ansprechenden Darstellung unserer Website).
                 </p>
               </div>
 
@@ -290,7 +270,7 @@ export default function Datenschutz() {
                   13. Datenübermittlung in Drittländer
                 </h2>
                 <p className="leading-relaxed">
-                  Eine Datenübermittlung in Drittländer (außerhalb der EU/des EWR) findet nur statt, wenn Sie der Nutzung von Google Maps aktiv zugestimmt haben (2-Click-Lösung) oder wenn Google Fonts von externen Servern geladen werden. In diesen Fällen erfolgt die Übermittlung auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der EU-Kommission) bzw. Ihrer Einwilligung.
+                  Eine Datenübermittlung in Drittländer (außerhalb der EU/des EWR) findet nur statt, wenn Sie der Nutzung von Google Maps aktiv zugestimmt haben (2-Click-Lösung). In diesem Fall erfolgt die Übermittlung auf Grundlage des EU-US Data Privacy Framework (Angemessenheitsbeschluss der EU-Kommission) bzw. Ihrer Einwilligung. Schriftarten werden lokal gehostet – es findet keine Datenübermittlung an Google statt.
                 </p>
               </div>
 
