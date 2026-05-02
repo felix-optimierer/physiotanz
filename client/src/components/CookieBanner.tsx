@@ -72,13 +72,13 @@ export default function CookieBanner() {
             <div className="flex flex-col sm:flex-row gap-2">
               <button
                 onClick={handleAcceptAll}
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#E91E8C] text-white text-xs font-semibold rounded-md hover:bg-[#D4167D] transition-all shadow-sm"
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#E91E8C] text-white text-xs font-semibold rounded-md hover:bg-[#D4167D] transition-all shadow-sm flex-1 sm:flex-none"
               >
                 Alle akzeptieren
               </button>
               <button
                 onClick={handleNecessaryOnly}
-                className="inline-flex items-center justify-center px-5 py-2.5 border border-[#ddd] text-[#555] text-xs font-medium rounded-md hover:bg-[#f9f9f9] transition-all"
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#f5f5f5] border border-[#ddd] text-[#333] text-xs font-semibold rounded-md hover:bg-[#eee] transition-all shadow-sm flex-1 sm:flex-none"
               >
                 Nur notwendige
               </button>
