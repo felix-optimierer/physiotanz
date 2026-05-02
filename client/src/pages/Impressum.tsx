@@ -1,6 +1,7 @@
 /*
  * Impressum Page – Physiotanz
- * DSGVO-konformes Impressum für Regina Forstner
+ * Vollständiges Impressum gemäß § 5 ECG (Österreich)
+ * Inkl. Hosting-Angabe und Bildnachweise
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
@@ -65,6 +66,31 @@ export default function Impressum() {
                 </h2>
                 <p className="leading-relaxed">
                   Bezirkshauptmannschaft Salzburg-Umgebung
+                </p>
+              </div>
+
+              {/* Hosting */}
+              <div>
+                <h2 className="text-lg font-semibold text-[#2D2D2D] mb-2">
+                  Hosting
+                </h2>
+                <p className="leading-relaxed">
+                  Diese Website wird gehostet von:<br />
+                  Hetzner Online GmbH<br />
+                  Industriestr. 25<br />
+                  91710 Gunzenhausen<br />
+                  Deutschland<br />
+                  <a
+                    href="https://www.hetzner.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#E91E8C] hover:underline"
+                  >
+                    www.hetzner.com
+                  </a>
+                </p>
+                <p className="leading-relaxed mt-2">
+                  Die Server befinden sich ausschließlich in deutschen Rechenzentren.
                 </p>
               </div>
 

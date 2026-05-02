@@ -1,13 +1,14 @@
 /*
  * Anfrage Step 3 – Termin
  * Multi-step form: Step 3 of 3
+ * DSGVO: Explizite Einwilligung per Checkbox vor Absenden
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
 import FormProgress from "@/components/FormProgress";
-import { useLocation } from "wouter";
+import { useLocation, Link } from "wouter";
 import { useState } from "react";
-import { ArrowLeft, Send, CheckCircle } from "lucide-react";
+import { ArrowLeft, Send, Shield } from "lucide-react";
 
 const timeSlots = [
   "Vormittag (8:00 – 12:00)",
@@ -21,6 +22,7 @@ export default function AnfrageStep3() {
   const [, navigate] = useLocation();
   const [selectedDays, setSelectedDays] = useState<string[]>([]);
   const [selectedTime, setSelectedTime] = useState("");
+  const [privacyConsent, setPrivacyConsent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   const toggleDay = (day: string) => {
@@ -30,6 +32,7 @@ export default function AnfrageStep3() {
   };
 
   const handleSubmit = () => {
+    if (!privacyConsent) return;
     setSubmitting(true);
     // Store final data
     sessionStorage.setItem(
@@ -102,14 +105,36 @@ export default function AnfrageStep3() {
               </div>
             </div>
 
-            {/* Privacy Note */}
+            {/* DSGVO Consent Checkbox */}
             <div className="bg-white rounded-lg border border-[#eee] p-4 mb-6">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="w-4 h-4 text-[#E91E8C] mt-0.5 shrink-0" />
-                <p className="text-xs text-[#888] leading-relaxed">
-                  Mit dem Absenden stimmst du zu, dass wir deine Daten zur Terminvereinbarung verwenden. Deine Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-                </p>
-              </div>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={privacyConsent}
+                  onChange={(e) => setPrivacyConsent(e.target.checked)}
+                  className="mt-1 w-4 h-4 accent-[#E91E8C] shrink-0"
+                />
+                <span className="text-xs text-[#666] leading-relaxed">
+                  Ich habe die{" "}
+                  <Link
+                    href="/datenschutz"
+                    className="text-[#E91E8C] underline hover:text-[#D4167D]"
+                  >
+                    Datenschutzerklärung
+                  </Link>{" "}
+                  gelesen und stimme der Verarbeitung meiner Daten zum Zweck der Terminvereinbarung zu. 
+                  Meine Daten werden ausschließlich zur Bearbeitung meiner Anfrage verwendet und nicht an Dritte weitergegeben. 
+                  Ich kann meine Einwilligung jederzeit per E-Mail an info@physiotanz.at widerrufen.
+                </span>
+              </label>
+            </div>
+
+            {/* Data Security Note */}
+            <div className="flex items-center gap-2 mb-6 justify-center">
+              <Shield className="w-3.5 h-3.5 text-[#16a34a]" />
+              <span className="text-xs text-[#999]">
+                Deine Daten werden SSL-verschlüsselt übertragen und auf deutschen Servern gespeichert.
+              </span>
             </div>
 
             <div className="flex gap-3">
@@ -122,8 +147,8 @@ export default function AnfrageStep3() {
               </button>
               <button
                 onClick={handleSubmit}
-                disabled={submitting}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#E91E8C] text-white font-semibold py-3.5 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm disabled:opacity-60"
+                disabled={submitting || !privacyConsent}
+                className="flex-1 flex items-center justify-center gap-2 bg-[#E91E8C] text-white font-semibold py-3.5 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {submitting ? (
                   <>

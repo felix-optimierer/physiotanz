@@ -1,15 +1,15 @@
 /*
  * Kontakt Page – Physiotanz
  * Design: Editorial Healthcare – warm, trustworthy
- * Includes Google Maps integration for practice location
+ * DSGVO: 2-Click-Lösung für Google Maps (erst nach Zustimmung laden)
  * CTAs: Personalisiert in mehreren Abschnitten
  */
 import Layout from "@/components/Layout";
 import FadeIn from "@/components/FadeIn";
 import { Link } from "wouter";
-import { MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, ArrowRight, Map, Shield } from "lucide-react";
 import { MapView } from "@/components/Map";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 const PRAXIS_IMG = "/manus-storage/praxis-aussen_3f91f739.webp";
 const PRAXIS_IMG_2 = "/manus-storage/praxis-aussen-2_1ea79ca0.webp";
@@ -19,6 +19,7 @@ const PRAXIS_LOCATION = { lat: 47.9958, lng: 12.8935 };
 
 export default function Kontakt() {
   const mapRef = useRef<google.maps.Map | null>(null);
+  const [mapConsent, setMapConsent] = useState(false);
 
   const handleMapReady = (map: google.maps.Map) => {
     mapRef.current = map;
@@ -158,22 +159,59 @@ export default function Kontakt() {
         </div>
       </section>
 
-      {/* Google Maps Section */}
+      {/* Google Maps Section – 2-Click-Lösung (DSGVO) */}
       <section className="bg-[#FAFAF8]">
         <div className="container max-w-5xl py-8 md:py-12">
           <FadeIn>
             <h2 className="text-xl font-bold text-[#2D2D2D] mb-4 text-center">So findest du uns</h2>
             <div className="rounded-lg overflow-hidden shadow-lg border border-[#eee]">
-              <MapView
-                className="w-full h-[350px] md:h-[420px]"
-                initialCenter={PRAXIS_LOCATION}
-                initialZoom={15}
-                onMapReady={handleMapReady}
-              />
+              {mapConsent ? (
+                <MapView
+                  className="w-full h-[350px] md:h-[420px]"
+                  initialCenter={PRAXIS_LOCATION}
+                  initialZoom={15}
+                  onMapReady={handleMapReady}
+                />
+              ) : (
+                /* 2-Click Placeholder – Karte wird erst nach Zustimmung geladen */
+                <div className="w-full h-[350px] md:h-[420px] bg-[#f0f0ee] flex flex-col items-center justify-center p-6 text-center">
+                  <div className="w-14 h-14 rounded-full bg-white shadow-md flex items-center justify-center mb-4">
+                    <Map className="w-7 h-7 text-[#E91E8C]" />
+                  </div>
+                  <h3 className="text-base font-semibold text-[#2D2D2D] mb-2">
+                    Google Maps Karte
+                  </h3>
+                  <p className="text-sm text-[#666] max-w-md mb-1">
+                    Bürmooser Landesstraße 4, 5113 St. Georgen bei Salzburg
+                  </p>
+                  <p className="text-xs text-[#999] max-w-md mb-5">
+                    Beim Laden der Karte werden Daten an Google übertragen. 
+                    Mehr dazu in unserer{" "}
+                    <Link href="/datenschutz" className="text-[#E91E8C] underline">
+                      Datenschutzerklärung
+                    </Link>.
+                  </p>
+                  <button
+                    onClick={() => setMapConsent(true)}
+                    className="inline-flex items-center gap-2 bg-[#E91E8C] text-white font-semibold px-6 py-3 rounded-md hover:bg-[#D4167D] transition-all shadow-md text-sm"
+                  >
+                    <Map className="w-4 h-4" />
+                    Karte laden
+                  </button>
+                  <div className="flex items-center gap-1.5 mt-3">
+                    <Shield className="w-3 h-3 text-[#16a34a]" />
+                    <span className="text-[10px] text-[#bbb]">
+                      Erst nach Ihrer Zustimmung werden externe Inhalte geladen
+                    </span>
+                  </div>
+                </div>
+              )}
             </div>
-            <p className="text-xs text-[#999] text-center mt-3">
-              Bürmooser Landesstraße 4, 5113 St. Georgen bei Salzburg
-            </p>
+            {mapConsent && (
+              <p className="text-xs text-[#999] text-center mt-3">
+                Bürmooser Landesstraße 4, 5113 St. Georgen bei Salzburg
+              </p>
+            )}
           </FadeIn>
 
           {/* CTA nach Google Maps */}
