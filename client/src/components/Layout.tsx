@@ -10,7 +10,7 @@ import { useState, useEffect, useRef } from "react";
 import { Mail, MapPin, ChevronUp, Menu, X, Cookie } from "lucide-react";
 import { showCookieBanner } from "@/components/CookieBanner";
 
-const LOGO_URL = "/manus-storage/logo-2x_1e9a54d3.webp";
+const LOGO_URL = "/images/logo-2x_1e9a54d3.webp";
 
 const navItems = [
   { label: "Startseite", href: "/" },

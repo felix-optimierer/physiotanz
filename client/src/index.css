@@ -15,42 +15,42 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-400-normal_c06960c4.woff2') format('woff2');
+  src: url('/images/lora-latin-400-normal_c06960c4.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Lora';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-400-italic_24e18e61.woff2') format('woff2');
+  src: url('/images/lora-latin-400-italic_24e18e61.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-500-normal_0c60763c.woff2') format('woff2');
+  src: url('/images/lora-latin-500-normal_0c60763c.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-600-normal_5cf162e4.woff2') format('woff2');
+  src: url('/images/lora-latin-600-normal_5cf162e4.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Lora';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-700-normal_05b74331.woff2') format('woff2');
+  src: url('/images/lora-latin-700-normal_05b74331.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Lora';
   font-style: italic;
   font-weight: 700;
   font-display: swap;
-  src: url('/manus-storage/lora-latin-700-italic_c3c4703e.woff2') format('woff2');
+  src: url('/images/lora-latin-700-italic_c3c4703e.woff2') format('woff2');
 }
 
 /* Source Sans 3 – Body Font */
@@ -59,35 +59,35 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('/manus-storage/source-sans-3-latin-400-normal_63a2b6d1.woff2') format('woff2');
+  src: url('/images/source-sans-3-latin-400-normal_63a2b6d1.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Source Sans 3';
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url('/manus-storage/source-sans-3-latin-400-italic_e7b8d8ab.woff2') format('woff2');
+  src: url('/images/source-sans-3-latin-400-italic_e7b8d8ab.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url('/manus-storage/source-sans-3-latin-500-normal_1e6acf8c.woff2') format('woff2');
+  src: url('/images/source-sans-3-latin-500-normal_1e6acf8c.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('/manus-storage/source-sans-3-latin-600-normal_6c955af5.woff2') format('woff2');
+  src: url('/images/source-sans-3-latin-600-normal_6c955af5.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Source Sans 3';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('/manus-storage/source-sans-3-latin-700-normal_ab0847bc.woff2') format('woff2');
+  src: url('/images/source-sans-3-latin-700-normal_ab0847bc.woff2') format('woff2');
 }
 
 @theme inline {

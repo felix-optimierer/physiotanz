@@ -10,13 +10,13 @@ import FadeIn from "@/components/FadeIn";
 import { Link } from "wouter";
 import { CheckCircle, Clock, Shield, Heart, Zap, Baby, ArrowRight, Star, Quote } from "lucide-react";
 
-const HERO_IMG = "/manus-storage/hero-mother-baby_4dd1f20e.webp";
-const MOTHER_CHILD_IMG = "/manus-storage/hero-mother-baby_4dd1f20e.webp";
-const PELVIC_IMG = "/manus-storage/pelvic-floor-illustration_9a57e5b5.webp";
-const YOGA_IMG = "/manus-storage/confident-woman-yoga_fe87d662.webp";
-const STUHL_IMG = "/manus-storage/beckenbodenstuhl-praxis_a221d095.webp";
-const REGINA_IMG = "/manus-storage/regina-forstner_1bddf2a8.webp";
-const PATTERN_IMG = "/manus-storage/abstract-pattern-pink_dbf4fca5.webp";
+const HERO_IMG = "/images/hero-mother-baby_4dd1f20e.webp";
+const MOTHER_CHILD_IMG = "/images/hero-mother-baby_4dd1f20e.webp";
+const PELVIC_IMG = "/images/pelvic-floor-illustration_9a57e5b5.webp";
+const YOGA_IMG = "/images/confident-woman-yoga_fe87d662.webp";
+const STUHL_IMG = "/images/beckenbodenstuhl-praxis_a221d095.webp";
+const REGINA_IMG = "/images/regina-forstner_1bddf2a8.webp";
+const PATTERN_IMG = "/images/abstract-pattern-pink_dbf4fca5.webp";
 
 const testimonials = [
   {

@@ -9,10 +9,10 @@ import { Link } from "wouter";
 import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
-const STUHL_IMG = "/manus-storage/beckenbodenstuhl-praxis_a221d095.webp";
-const PELVIC_IMG = "/manus-storage/pelvic-floor-illustration_9a57e5b5.webp";
-const YOGA_IMG = "/manus-storage/confident-woman-yoga_fe87d662.webp";
-const KONZEPT_IMG = "/manus-storage/pelvipower-konzept_5f85c14c.webp";
+const STUHL_IMG = "/images/beckenbodenstuhl-praxis_a221d095.webp";
+const PELVIC_IMG = "/images/pelvic-floor-illustration_9a57e5b5.webp";
+const YOGA_IMG = "/images/confident-woman-yoga_fe87d662.webp";
+const KONZEPT_IMG = "/images/pelvipower-konzept_5f85c14c.webp";
 
 const faqs = [
   {

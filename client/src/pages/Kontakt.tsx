@@ -11,8 +11,8 @@ import { MapPin, Phone, Mail, Clock, ArrowRight, Map, Shield } from "lucide-reac
 import { MapView } from "@/components/Map";
 import { useRef, useState } from "react";
 
-const PRAXIS_IMG = "/manus-storage/praxis-aussen_3f91f739.webp";
-const PRAXIS_IMG_2 = "/manus-storage/praxis-aussen-2_1ea79ca0.webp";
+const PRAXIS_IMG = "/images/praxis-aussen_3f91f739.webp";
+const PRAXIS_IMG_2 = "/images/praxis-aussen-2_1ea79ca0.webp";
 
 // Physiotanz location: Bürmooser Landesstraße 4, 5113 St. Georgen bei Salzburg
 const PRAXIS_LOCATION = { lat: 47.9958, lng: 12.8935 };

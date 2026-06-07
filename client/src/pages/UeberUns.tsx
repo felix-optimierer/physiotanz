@@ -8,11 +8,11 @@ import FadeIn from "@/components/FadeIn";
 import { Link } from "wouter";
 import { ArrowRight, Award, Heart, Users, Sparkles } from "lucide-react";
 
-const REGINA_IMG = "/manus-storage/regina-forstner_1bddf2a8.webp";
-const PRAXIS_IMG = "/manus-storage/praxis-aussen_3f91f739.webp";
-const BEHANDLUNG1 = "/manus-storage/behandlungsraum-1_026c8880.webp";
-const BEHANDLUNG3 = "/manus-storage/behandlungsraum-3_ef9f7509.webp";
-const GYMNASTIK = "/manus-storage/gymnastikbaelle_5a6c84ae.webp";
+const REGINA_IMG = "/images/regina-forstner_1bddf2a8.webp";
+const PRAXIS_IMG = "/images/praxis-aussen_3f91f739.webp";
+const BEHANDLUNG1 = "/images/behandlungsraum-1_026c8880.webp";
+const BEHANDLUNG3 = "/images/behandlungsraum-3_ef9f7509.webp";
+const GYMNASTIK = "/images/gymnastikbaelle_5a6c84ae.webp";
 
 const qualifications = [
   "Diplomierte Physiotherapeutin",
