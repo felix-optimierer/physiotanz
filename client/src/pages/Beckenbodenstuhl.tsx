@@ -10,8 +10,8 @@ import { ArrowRight, CheckCircle, HelpCircle } from "lucide-react";
 import { useState } from "react";
 
 const STUHL_IMG = "/manus-storage/beckenbodenstuhl-praxis_a221d095.webp";
-const PELVIC_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/pelvic-floor-illustration-DwQM4pvqXx534Uiaut89Vk.webp";
-const YOGA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/confident-woman-yoga-LJeq5KihvNZfHVCZ2LiM2p.webp";
+const PELVIC_IMG = "/manus-storage/pelvic-floor-illustration_9a57e5b5.webp";
+const YOGA_IMG = "/manus-storage/confident-woman-yoga_fe87d662.webp";
 const KONZEPT_IMG = "/manus-storage/pelvipower-konzept_5f85c14c.webp";
 
 const faqs = [

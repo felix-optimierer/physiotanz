@@ -7,7 +7,8 @@
  */
 import { Link, useLocation } from "wouter";
 import { useState, useEffect, useRef } from "react";
-import { Mail, MapPin, ChevronUp, Menu, X } from "lucide-react";
+import { Mail, MapPin, ChevronUp, Menu, X, Cookie } from "lucide-react";
+import { showCookieBanner } from "@/components/CookieBanner";
 
 const LOGO_URL = "/manus-storage/logo-2x_1e9a54d3.webp";
 
@@ -259,6 +260,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               >
                 Impressum
               </Link>
+              <button
+                onClick={showCookieBanner}
+                className="hover:text-white/60 transition-colors inline-flex items-center gap-1"
+              >
+                <Cookie className="w-3 h-3" />
+                Cookie-Einstellungen
+              </button>
             </div>
           </div>
         </div>

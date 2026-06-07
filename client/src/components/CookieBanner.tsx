@@ -2,10 +2,11 @@
  * DSGVO-konformer Cookie-Banner
  * - Zeigt Banner beim ersten Besuch (KEINE Verzögerung - sofort sichtbar)
  * - Speichert Einwilligung in localStorage
- * - "Alle akzeptieren" und "Nur notwendige" Optionen
+ * - "Alle akzeptieren" und "Nur notwendige" Optionen (GLEICHWERTIG gestaltet)
  * - Link zur Datenschutzerklärung
  * - Blockiert Analytics bis Einwilligung erteilt
  * - X-Button = "Nur notwendige" (nicht "Alle akzeptieren")
+ * - Exportiert showCookieBanner() für Widerruf-Link im Footer
  */
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
@@ -14,6 +15,13 @@ import { Cookie, X, Shield } from "lucide-react";
 const COOKIE_CONSENT_KEY = "physiotanz_cookie_consent";
 
 type ConsentStatus = "accepted" | "necessary_only" | null;
+
+// Event-basierter Mechanismus um Banner von außen zu öffnen (Footer-Link)
+const SHOW_BANNER_EVENT = "physiotanz_show_cookie_banner";
+
+export function showCookieBanner() {
+  window.dispatchEvent(new CustomEvent(SHOW_BANNER_EVENT));
+}
 
 export default function CookieBanner() {
   const [visible, setVisible] = useState(false);
@@ -24,6 +32,11 @@ export default function CookieBanner() {
       // Show immediately - no delay, DSGVO requires consent BEFORE tracking
       setVisible(true);
     }
+
+    // Listen for external show requests (Footer "Cookie-Einstellungen" Link)
+    const handleShow = () => setVisible(true);
+    window.addEventListener(SHOW_BANNER_EVENT, handleShow);
+    return () => window.removeEventListener(SHOW_BANNER_EVENT, handleShow);
   }, []);
 
   const handleAcceptAll = () => {
@@ -69,18 +82,19 @@ export default function CookieBanner() {
               </div>
             </div>
 
+            {/* DSGVO: Buttons GLEICHWERTIG gestaltet (gleiche Größe, gleiche Prominenz) */}
             <div className="flex flex-col sm:flex-row gap-2">
               <button
-                onClick={handleAcceptAll}
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#E91E8C] text-white text-xs font-semibold rounded-md hover:bg-[#D4167D] transition-all shadow-sm flex-1 sm:flex-none"
-              >
-                Alle akzeptieren
-              </button>
-              <button
                 onClick={handleNecessaryOnly}
-                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#f5f5f5] border border-[#ddd] text-[#333] text-xs font-semibold rounded-md hover:bg-[#eee] transition-all shadow-sm flex-1 sm:flex-none"
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#2D2D2D] text-white text-xs font-semibold rounded-md hover:bg-[#444] transition-all shadow-sm flex-1 sm:flex-none"
               >
                 Nur notwendige
+              </button>
+              <button
+                onClick={handleAcceptAll}
+                className="inline-flex items-center justify-center px-5 py-2.5 bg-[#2D2D2D] text-white text-xs font-semibold rounded-md hover:bg-[#444] transition-all shadow-sm flex-1 sm:flex-none"
+              >
+                Alle akzeptieren
               </button>
               <Link
                 href="/datenschutz"

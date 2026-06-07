@@ -10,13 +10,13 @@ import FadeIn from "@/components/FadeIn";
 import { Link } from "wouter";
 import { CheckCircle, Clock, Shield, Heart, Zap, Baby, ArrowRight, Star, Quote } from "lucide-react";
 
-const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/hero-mother-baby-FLpCz4TqFnvp67mntbndi8.webp";
-const MOTHER_CHILD_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/mother-playing-child-9HsxKbTpfmUa9QLbbqV6Bx.webp";
-const PELVIC_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/pelvic-floor-illustration-DwQM4pvqXx534Uiaut89Vk.webp";
-const YOGA_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/confident-woman-yoga-LJeq5KihvNZfHVCZ2LiM2p.webp";
+const HERO_IMG = "/manus-storage/hero-mother-baby_4dd1f20e.webp";
+const MOTHER_CHILD_IMG = "/manus-storage/hero-mother-baby_4dd1f20e.webp";
+const PELVIC_IMG = "/manus-storage/pelvic-floor-illustration_9a57e5b5.webp";
+const YOGA_IMG = "/manus-storage/confident-woman-yoga_fe87d662.webp";
 const STUHL_IMG = "/manus-storage/beckenbodenstuhl-praxis_a221d095.webp";
 const REGINA_IMG = "/manus-storage/regina-forstner_1bddf2a8.webp";
-const PATTERN_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663184004032/m4dJWEuaSw3XPMmYshEx6Y/abstract-pattern-pink-QvNBq4jQkFWoYwrAUCthfa.webp";
+const PATTERN_IMG = "/manus-storage/abstract-pattern-pink_dbf4fca5.webp";
 
 const testimonials = [
   {
